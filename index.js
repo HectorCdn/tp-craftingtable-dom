@@ -6,6 +6,10 @@ const MATERIAL_AIR_IMG = "./assets/air.webp";
 const MATERIAL_IRON_INGOT_IMG = "./assets/iron-ingot.webp";
 const MATERIAL_STICK_IMG = "./assets/stick.webp";
 
+const slotCrafting = document.querySelector("#slotCrafting");
+const ironIngot = document.querySelector("#iron-ingot");
+const stick = document.querySelector("#stick");
+
 const materials = [MATERIAL_AIR_ID, MATERIAL_IRON_INGOT_ID, MATERIAL_STICK_ID];
 const materialsImageSrc = [
 	MATERIAL_AIR_IMG,
@@ -44,5 +48,3 @@ const recipeImageSrcList = [pickaxeRecipeImageSrc, axeRecipeImageSrc];
 
 const craftingTable = ["", "", "", "", "", "", "", "", ""];
 const inventoryTable = [1, 2];
-
-// Coder ici

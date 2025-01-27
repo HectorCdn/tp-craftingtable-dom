@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	padding: 55px;
+	gap: 40px;
+	font-family: Pixelify Sans;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 64px;
+	color: #000000b3;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.crafting {
+	display: grid;
+	grid-template-columns: repeat(3, 100px);
+	grid-template-rows: repeat(3, 100px);
+	gap: 12px;
+	background-color: #d3d3d3;
+	padding: 12px;
+}
+
+.slotCrafting {
+	width: 100%;
+	height: 100%;
+	background-color: #b2b2b2;
+	border: none;
+	box-shadow: 0px 0px 0px 4px #00000066;
+	cursor: pointer;
+}
+
+.slotCrafting:hover {
+	background-color: #a3a3a3;
+}
+
+.flecheRendu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.flecheRendu img {
+	width: 64px;
+	height: 64px;
+}
+
+.rendu {
+	width: 100%;
+	height: 100%;
+	background-color: #b2b2b2;
+	border: none;
+	box-shadow: 0px 0px 0px 4px #00000066;
+	cursor: pointer;
+}
+
+.rendu:hover {
+	background-color: #a3a3a3;
+}
+
+footer {
+	width: 293px;
+	height: 41px;
+	top: 745px;
+	left: 89px;
+	color: #000000b3;
+}
+
+.inventory {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	margin: 10px;
+}
+
+.slotInventory {
+	width: 100px;
+	height: 100px;
+	background-color: #b2b2b2;
+	border: none;
+	box-shadow: 0px 0px 0px 4px #00000066;
+	cursor: pointer;
+}
+
+.slotInventory:hover {
+	background-color: #a3a3a3;
+}
+
+@media screen and (min-width: 1024px) {
+	h1 {
+		font-size: 70px;
+		font-weight: 700;
+		line-height: 64px;
+		margin-bottom: 63px;
+	}
+	main {
+		flex-direction: row;
+		margin-left: 113px;
+	}
+
+	.slotCrafting {
+		padding: 15px;
+		grid-template-columns: repeat(3, 141px);
+		grid-template-rows: repeat(3, 141px);
+	}
+	.flecheRendu {
+		align-items: center;
+		margin-left: 167px;
+		gap: 167px;
+	}
+	.flecheRendu img {
+		width: 141px;
+		height: 141px;
+	}
+	.rendu {
+		height: 141px;
+		width: 141px;
+	}
+}
