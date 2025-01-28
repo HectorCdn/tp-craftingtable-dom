@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Craftingtable</title>
-	</head>
-	<body>
-		<header>
-			<h1>CraftingTable</h1>
-		</header>
-		<main>
-			<div class="crafting">
-				<button class="CraftingTable"></button>
-				<button class="CraftingTable"></button>
-				<button class="CraftingTable"></button>
-				<button class="CraftingTable"></button>
-				<button class="CraftingTable"></button>
-				<button class="CraftingTable"></button>
-				<button class="CraftingTable"></button>
-				<button class="CraftingTable"></button>
-				<button class="CraftingTable"></button>
-			</div>
-			<div class="flecheRendu">
-				<img src="assets/arrow-right-bold-outline.svg" alt="fleche" />
-				<div class="rendu"></div>
-			</div>
-		</main>
-		<footer>
-			<h2>Inventory</h2>
-		</footer>
-		<script src="index.js"></script>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>crafting-table</title>
+    </head>
+    <body>
+        <header>
+            <h1>CraftingTable</h1>
+        </header>
+        <main>
+            <section class="crafting-section">
+                <section class="crafting">
+                    <button class="crafting-slot"></button>
+                    <button class="crafting-slot"></button>
+                    <button class="crafting-slot"></button>
+                    <button class="crafting-slot"></button>
+                    <button class="crafting-slot"></button>
+                    <button class="crafting-slot"></button>
+                    <button class="crafting-slot"></button>
+                    <button class="crafting-slot"></button>
+                    <button class="crafting-slot"></button>
+                </section>
+                <section class="result">
+                    <img class="arrow" src="assets/arrow-right-bold-outline.svg" />
+                    <button class="result-slot" id="result-slot"></button>
+                </section>
+            </section>
+            <section class="inventory">
+                <h2>Inventory</h2>  
+                <div class="inventory-container">
+                    
+                </div>
+            </section>
+        </main>
+        <script src="./index.js"></script>
+    </body>
 </html>

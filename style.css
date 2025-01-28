@@ -1,109 +1,126 @@
-@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Code:wght@300..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Martian+Mono:wght@100..800&family=Pacifico&family=Pixelify+Sans:wght@400..700&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
-
 body {
+	font-family: "Pixelify Sans", serif;
 	display: flex;
 	flex-direction: column;
-	padding: 55px;
-	gap: 40px;
-	font-family: Pixelify Sans;
+	padding: 15px;
+	height: 100vh;
 }
-
+img {
+	max-width: 100%;
+}
 h1 {
-	font-size: 36px;
-	font-weight: 700;
+	font-size: 70px;
 	line-height: 64px;
-	color: #000000b3;
+}
+h2 {
+	font-size: 48px;
+	line-height: 38px;
+}
+.crafting-slot {
+	background-color: #b2b2b2;
+	box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.4);
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+.selected {
+	border: solid 5px red !important;
+}
+.crafting-slot:hover {
+	background-color: #d3d3d3;
+}
+.result-slot {
+	width: 141px;
+	height: 141px;
+	background-color: #b2b2b2;
+	box-shadow: inset 0px 0px 0px 5px #00000066;
+	border: none;
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	gap: 40px;
-}
-
-.crafting {
-	display: grid;
-	grid-template-columns: repeat(3, 100px);
-	grid-template-rows: repeat(3, 100px);
-	gap: 12px;
-	background-color: #d3d3d3;
-	padding: 12px 200px 12px 12px;
-}
-
-.CraftingTable {
 	width: 100%;
 	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.crafting-section {
+	margin-top: 100px;
+	margin-left: 100px;
+	width: 90%;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr;
+	height: 50%;
+	margin-bottom: 100px;
+}
+.crafting {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 141px);
+	grid-template-rows: repeat(3, 141px);
+	gap: 10px;
+	background-color: #d3d3d3;
+	padding: 5px;
+}
+.result {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.arrow {
+	width: 10%;
+}
+
+.inventory {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.inventory-btn {
 	background-color: #b2b2b2;
 	border: none;
-	box-shadow: 0px 0px 0px 4px #00000066;
-	cursor: pointer;
+	box-shadow: 0 0 0 4px #00000066;
 }
 
-.flecheRendu {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+.inventory-container {
+	display: grid;
+	grid-template-columns: repeat(18, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 12px;
 }
 
-.flecheRendu img {
-	width: 64px;
-	height: 64px;
-}
-
-.rendu {
-	height: 64px;
-	width: 64px;
-	background-color: #ccc;
-	border: 2px solid #888;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-footer {
-	width: 293px;
-	height: 41px;
-	top: 745px;
-	left: 89px;
-	color: #000000b3;
-}
-
-.testClick {
-	border: solid 4px red;
-}
-
-@media screen and (min-width: 1024px) {
-	h1 {
-		font-size: 70px;
-		font-weight: 700;
-		line-height: 64px;
-		margin-bottom: 63px;
+@media screen and (max-width: 375px) {
+	h1,
+	h2 {
+		font-size: 36px;
 	}
-	main {
-		flex-direction: row;
-		margin-left: 113px;
+	.crafting-section {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		margin: 0px;
+		gap: 120px;
 	}
 	.crafting {
-		padding: 15px;
-		grid-template-columns: repeat(3, 141px);
-		grid-template-rows: repeat(3, 141px);
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 70%);
 	}
-	.flecheRendu {
+	.arrow {
+		width: 30%;
+	}
+	.result-slot {
+		width: 30%;
+		height: 70%;
+	}
+	main {
 		align-items: center;
-		margin-left: 167px;
-		gap: 167px;
-	}
-	.flecheRendu img {
-		width: 141px;
-		height: 141px;
-	}
-	.rendu {
-		height: 141px;
-		width: 141px;
 	}
 }
